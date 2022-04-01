@@ -1,0 +1,19 @@
+Requirements:
+
+1. artist / Listener -> make an account, login 
+
+1.1 Artist
+add album (add song/ remove song from system)
+add events
+
+
+1.2 Listener
+Search -> search bel song name, artist name, album name, genre 
+Listen
+Create playlist (add/ remove songs)
+follow an artist/friend
+show my profile (share my playlist)
+
+
+
+
