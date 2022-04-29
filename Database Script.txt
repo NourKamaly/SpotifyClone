@@ -1,80 +1,87 @@
 create table Listeners (
-    listenerID number(6) primary key ,
+    listenerID int primary key ,
     firstName  varchar2(25),
     lastName   varchar2(25),
     email      varchar2(25) unique not null,
-    pass    varchar(30) unique not null,
+    pass    varchar2(30) unique not null,
     username    varchar2(25) unique not null,
     dateOfBirth  date 
 );
 
 create table Playlists (
-    playlistID  number(6) primary key ,
+    playlistID  int primary key ,
     name varchar2(40) ,
-    numOfSongs number(100)
+    numOfSongs int
 );
 
 create table Artists (
-    artistID number(6) primary key,
+    artistID int primary key,
     firstName  varchar2(25),
     lastName   varchar2(25),
-    email      varchar2(25) unique,
+    email      varchar2(25) unique not null,
     pass    varchar(30) unique not null,
     bio         varchar2(150)
 
 );
 
 create table Albums (
-    albumID number(30) primary key ,
+    albumID int primary key ,
     genre varchar2(25),
     name varchar2(40),
     dateAdded date,
-    numOfSongs number(6),
-    artistID number(6) ,
+    numOfSongs int,
+    artistID int ,
     foreign key (artistID) references Artists (artistID) on delete cascade
 );
 
 create table Songs(
-    songID number(30) primary key,
+    songID int primary key,
     name varchar2 (25),
     isSingle bit(1),
     lengthOfSong  number(3,2),
-    artistID number(6) ,
-    albumID number(30) ,
+    artistID int ,
+    albumID int ,
    foreign key (artistID) references Artists (artistID) on delete cascade,
   foreign key (albumID)  references Albums (albumID) on delete cascade,
 );
 
 create table events (
-    eventID number(5) primary key ,
+    eventID int primary key ,
     name varchar2(30),
     location varchar2(30),
-    price number(5)  check (price>0),
+    price int check (price>0),
     description varchar2(200),
     dateOfEvent date,
-    artistID number(6), 
-    foreign key (artistID) references Artists (artistID) on delete cascade,
+    artistID int, 
+    foreign key (artistID) references Artists (artistID) on delete cascade
 );
 
 create table ListenersFollowers(
-    followed number (6) references Listeners (listenerID) on delete cascade,
-    follower number (6) references Listeners (listenerID) on delete cascade,
+    followed int ,
+    follower int ,
+    foreign key (followed) references Listeners (listenerID) on delete cascade,
+    foreign key (follower) references Listeners (listenerID) on delete cascade,
     primary key(followed,follower)
 );
 
 create table PlaylistDetails (
-   listenerID number (6) references Listeners (listenerID) on delete cascade,
-   playlistID number(6) references Playlists (playlistID) on delete cascade,
-   songID number(30) references Song (songID) on delete cascade ,
-   primary key(lisenterID,playlistID,songID)
+   listenerID int,
+   playlistID int,
+   songID int,
+   foreign key (listenerID) references Listeners (listenerID) on delete cascade,
+   foreign key (playlistID) references Playlists (playlistID) on delete cascade,
+   foreign key (songID) references Song (songID) on delete cascade ,
 );
 
 create ArtistsFollowers (
-   artistID number(6) references Artists (artistID) on delete cascade,
-   listenerID number (6) references Listeners (listenerID) on delete cascade,
+   artistID int,
+   listenerID int,
+   foreign key (listenerID) references Listeners (listenerID) on delete cascade,
+   foreign key (artistID) references Artists (artistID) on delete cascade,
    primary key (artistID,listenerID)
 );
 
+alter PlaylistDetails add primary key(listenerID,playlistID,songID);
 
 
 
