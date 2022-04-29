@@ -4,7 +4,6 @@ create table Listeners (
     lastName   varchar2(25),
     email      varchar2(25) unique not null,
     pass    varchar2(30) unique not null,
-    username    varchar2(25) unique not null,
     dateOfBirth  date 
 );
 
@@ -91,7 +90,7 @@ add foreign key (playlistID) references Playlists (playlistID) on delete cascade
 alter table PlaylistDetails
 add foreign key (songID) references Song (songID) on delete cascade;
 
-# there is an issue with this table so you may find an error whehn running the following code
+# there is an issue with this table so you may find an error when running the following code
 create ArtistsFollowers (
    artistID int,
    listenerID int,
