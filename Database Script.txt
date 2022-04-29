@@ -1,57 +1,59 @@
 create table Listeners (
-    listenerID number(6) primary key AUTO_INCREMENT,
+    listenerID number(6) primary key ,
     firstName  varchar2(25),
     lastName   varchar2(25),
     email      varchar2(25) unique not null,
-    password    varchar(30) unique not null,
+    pass    varchar(30) unique not null,
     username    varchar2(25) unique not null,
     dateOfBirth  date 
 );
 
 create table Playlists (
-    playlistID  number(6) primary key AUTO_INCREMENT,
+    playlistID  number(6) primary key ,
     name varchar2(40) ,
     numOfSongs number(100)
 );
 
 create table Artists (
-    artistID number(6) primary key AUTO_INCREMENT,
+    artistID number(6) primary key,
     firstName  varchar2(25),
     lastName   varchar2(25),
     email      varchar2(25) unique,
-    password    varchar(30) unique not null,
+    pass    varchar(30) unique not null,
     bio         varchar2(150)
 
 );
 
 create table Albums (
-    albumID number(30) primary key AUTO_INCREMENT,
+    albumID number(30) primary key ,
     genre varchar2(25),
     name varchar2(40),
     dateAdded date,
     numOfSongs number(6),
-    artistID number(6) references Artists (artistID) on delete cascade
-
+    artistID number(6) ,
+    foreign key (artistID) references Artists (artistID) on delete cascade
 );
 
 create table Songs(
-    songID number(30) primary key AUTO_INCREMENT,
+    songID number(30) primary key,
     name varchar2 (25),
     isSingle bit(1),
     lengthOfSong  number(3,2),
-    artistID number(6) references Artists(artistID) on delete cascade,
-    albumID number(30) references Albums (albumID) on delete cascade
+    artistID number(6) ,
+    albumID number(30) ,
+   foreign key (artistID) references Artists (artistID) on delete cascade,
+  foreign key (albumID)  references Albums (albumID) on delete cascade,
 );
 
-create table Events (
-    eventID number(5) primary key AUTO_INCREMENT,
+create table events (
+    eventID number(5) primary key ,
     name varchar2(30),
     location varchar2(30),
     price number(5)  check (price>0),
+    description varchar2(200),
     dateOfEvent date,
-    artistID varchar2(6) references Artists (artistID) on delete cascade,
-    description varchar2(200)
-
+    artistID number(6), 
+    foreign key (artistID) references Artists (artistID) on delete cascade,
 );
 
 create table ListenersFollowers(
