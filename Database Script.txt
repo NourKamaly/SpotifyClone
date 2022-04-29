@@ -1,5 +1,5 @@
 create table Listeners (
-    listenerID int primary key ,
+    listenerID int primary key AUTO_INCREMENT ,
     firstName  varchar2(25),
     lastName   varchar2(25),
     email      varchar2(25) unique not null,
@@ -9,81 +9,99 @@ create table Listeners (
 );
 
 create table Playlists (
-    playlistID  int primary key ,
-    name varchar2(40) ,
+    playlistID  int primary key AUTO_INCREMENT,
+    name varchar2(40),
     numOfSongs int
 );
 
 create table Artists (
-    artistID int primary key,
+    artistID int primary key AUTO_INCREMENT,
     firstName  varchar2(25),
     lastName   varchar2(25),
     email      varchar2(25) unique not null,
-    pass    varchar(30) unique not null,
-    bio         varchar2(150)
+    pass    varchar2(30) unique not null,
+    bio      varchar2(150)
 
 );
 
 create table Albums (
-    albumID int primary key ,
+    albumID int primary key AUTO_INCREMENT,
     genre varchar2(25),
     name varchar2(40),
     dateAdded date,
     numOfSongs int,
-    artistID int ,
-    foreign key (artistID) references Artists (artistID) on delete cascade
+    artistID int
 );
+
+alter table Albums 
+add foreign key (artistID) references Artists (artistID) on delete cascade;
 
 create table Songs(
-    songID int primary key,
+    songID int primary key AUTO_INCREMENT,
     name varchar2 (25),
-    isSingle bit(1),
-    lengthOfSong  number(3,2),
+    isSingle int,
+    lengthOfSong float,
     artistID int ,
-    albumID int ,
-   foreign key (artistID) references Artists (artistID) on delete cascade,
-  foreign key (albumID)  references Albums (albumID) on delete cascade,
+    albumID int
 );
+alter table Songs
+add foreign key (artistID) references Artists (artistID) on delete cascade;
+
+alter table Songs 
+foreign key (albumID)  references Albums (albumID) on delete cascade;
 
 create table events (
-    eventID int primary key ,
+    eventID int primary key AUTO_INCREMENT,
     name varchar2(30),
     location varchar2(30),
     price int check (price>0),
     description varchar2(200),
     dateOfEvent date,
     artistID int, 
-    foreign key (artistID) references Artists (artistID) on delete cascade
 );
+alter table events 
+add foreign key (artistID) references Artists (artistID) on delete cascade;
 
 create table ListenersFollowers(
     followed int ,
     follower int ,
-    foreign key (followed) references Listeners (listenerID) on delete cascade,
-    foreign key (follower) references Listeners (listenerID) on delete cascade,
     primary key(followed,follower)
 );
+
+alter table ListenersFollowers
+add foreign key (followed) references Listeners (listenerID) on delete cascade;
+
+alter table ListenersFollowers
+foreign key (follower) references Listeners (listenerID) on delete cascade;
 
 create table PlaylistDetails (
    listenerID int,
    playlistID int,
    songID int,
-   foreign key (listenerID) references Listeners (listenerID) on delete cascade,
-   foreign key (playlistID) references Playlists (playlistID) on delete cascade,
-   foreign key (songID) references Song (songID) on delete cascade ,
+   primary key(listenerID,playlistID,songID)
+
 );
 
+alter table PlaylistDetails
+add foreign key (listenerID) references Listeners (listenerID) on delete cascade;
+
+alter table PlaylistDetails
+add foreign key (playlistID) references Playlists (playlistID) on delete cascade;
+
+alter table PlaylistDetails
+add foreign key (songID) references Song (songID) on delete cascade;
+
+# there is an issue with this table so you may find an error whehn running the following code
 create ArtistsFollowers (
    artistID int,
    listenerID int,
-   foreign key (listenerID) references Listeners (listenerID) on delete cascade,
-   foreign key (artistID) references Artists (artistID) on delete cascade,
    primary key (artistID,listenerID)
 );
 
-alter PlaylistDetails add primary key(listenerID,playlistID,songID);
+alter table ArtistsFollowers
+add foreign key (listenerID) references Listeners (listenerID) on delete cascade;
 
-
-
+alter table ArtistsFollowers
+add foreign key (artistID) references Artists (artistID) on delete cascade;
 
 
