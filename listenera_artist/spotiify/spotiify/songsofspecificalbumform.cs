@@ -29,7 +29,7 @@ namespace spotiify
             conn = new OracleConnection(ordb);
             conn.Open();
 
-            nameofalbum.Text = Artist.albumname;
+            //nameofalbum.Text = Artist.albumname;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandText = "GET_SONGS_OF_SPECIFIC_ALBUM";

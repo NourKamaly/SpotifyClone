@@ -94,6 +94,11 @@ namespace spotiify
             obj.Show();
         }
 
+        private void concertslist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /// here////////////////////////////////////////
+        }
+
         private void AddAlbumbutton_Click(object sender, EventArgs e)
         {
             Addalbumform obj = new Addalbumform();

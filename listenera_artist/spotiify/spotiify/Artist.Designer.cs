@@ -37,6 +37,7 @@ namespace spotiify
             this.editbiobutton = new System.Windows.Forms.Button();
             this.albumslist = new System.Windows.Forms.ListBox();
             this.addconertbutton = new System.Windows.Forms.Button();
+            this.concertslist = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // artistName
@@ -134,10 +135,10 @@ namespace spotiify
             this.albumslist.ForeColor = System.Drawing.Color.White;
             this.albumslist.FormattingEnabled = true;
             this.albumslist.ItemHeight = 24;
-            this.albumslist.Location = new System.Drawing.Point(278, 447);
+            this.albumslist.Location = new System.Drawing.Point(265, 447);
             this.albumslist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.albumslist.Name = "albumslist";
-            this.albumslist.Size = new System.Drawing.Size(947, 240);
+            this.albumslist.Size = new System.Drawing.Size(482, 240);
             this.albumslist.TabIndex = 27;
             this.albumslist.SelectedIndexChanged += new System.EventHandler(this.albumslist_SelectedIndexChanged);
             // 
@@ -157,6 +158,21 @@ namespace spotiify
             this.addconertbutton.UseVisualStyleBackColor = false;
             this.addconertbutton.Click += new System.EventHandler(this.addconertbutton_Click);
             // 
+            // concertslist
+            // 
+            this.concertslist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.concertslist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.concertslist.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.concertslist.ForeColor = System.Drawing.Color.White;
+            this.concertslist.FormattingEnabled = true;
+            this.concertslist.ItemHeight = 24;
+            this.concertslist.Location = new System.Drawing.Point(793, 447);
+            this.concertslist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.concertslist.Name = "concertslist";
+            this.concertslist.Size = new System.Drawing.Size(466, 240);
+            this.concertslist.TabIndex = 30;
+            this.concertslist.SelectedIndexChanged += new System.EventHandler(this.concertslist_SelectedIndexChanged);
+            // 
             // Artist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -164,6 +180,7 @@ namespace spotiify
             this.BackgroundImage = global::spotiify.Properties.Resources.artistimage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1538, 836);
+            this.Controls.Add(this.concertslist);
             this.Controls.Add(this.albumslist);
             this.Controls.Add(this.songslist);
             this.Controls.Add(this.addconertbutton);
@@ -192,5 +209,6 @@ namespace spotiify
         private System.Windows.Forms.ListBox albumslist;
         private System.Windows.Forms.ListBox songslist;
         private System.Windows.Forms.Button addconertbutton;
+        private System.Windows.Forms.ListBox concertslist;
     }
 }

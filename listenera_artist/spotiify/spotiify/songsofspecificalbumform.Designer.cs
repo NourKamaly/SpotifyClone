@@ -29,47 +29,39 @@ namespace spotiify
         /// </summary>
         private void InitializeComponent()
         {
-            this.nameofalbum = new System.Windows.Forms.Label();
             this.songsofalbumlist = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // nameofalbum
-            // 
-            this.nameofalbum.AutoSize = true;
-            this.nameofalbum.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameofalbum.Location = new System.Drawing.Point(166, 9);
-            this.nameofalbum.Name = "nameofalbum";
-            this.nameofalbum.Size = new System.Drawing.Size(206, 34);
-            this.nameofalbum.TabIndex = 0;
-            this.nameofalbum.Text = "Name of album";
-            // 
             // songsofalbumlist
             // 
+            this.songsofalbumlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.songsofalbumlist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.songsofalbumlist.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.songsofalbumlist.ForeColor = System.Drawing.Color.White;
             this.songsofalbumlist.FormattingEnabled = true;
-            this.songsofalbumlist.ItemHeight = 16;
-            this.songsofalbumlist.Location = new System.Drawing.Point(45, 73);
+            this.songsofalbumlist.ItemHeight = 24;
+            this.songsofalbumlist.Location = new System.Drawing.Point(528, 190);
             this.songsofalbumlist.Name = "songsofalbumlist";
-            this.songsofalbumlist.Size = new System.Drawing.Size(497, 356);
+            this.songsofalbumlist.Size = new System.Drawing.Size(463, 456);
             this.songsofalbumlist.TabIndex = 1;
             // 
             // songsofspecificalbumform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 450);
+            this.BackgroundImage = global::spotiify.Properties.Resources.songsofspecificalbumimage;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1520, 789);
             this.Controls.Add(this.songsofalbumlist);
-            this.Controls.Add(this.nameofalbum);
             this.Name = "songsofspecificalbumform";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "songsofspecificalbumform";
             this.Load += new System.EventHandler(this.songsofspecificalbumform_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label nameofalbum;
         private System.Windows.Forms.ListBox songsofalbumlist;
     }
 }
