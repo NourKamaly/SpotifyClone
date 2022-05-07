@@ -56,6 +56,12 @@
     <Compile Include="Addalbumform.Designer.cs">
       <DependentUpon>Addalbumform.cs</DependentUpon>
     </Compile>
+    <Compile Include="addconcertform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addconcertform.Designer.cs">
+      <DependentUpon>addconcertform.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddsongForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,8 +94,17 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="songsofspecificalbumform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="songsofspecificalbumform.Designer.cs">
+      <DependentUpon>songsofspecificalbumform.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Addalbumform.resx">
       <DependentUpon>Addalbumform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addconcertform.resx">
+      <DependentUpon>addconcertform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddsongForm.resx">
       <DependentUpon>AddsongForm.cs</DependentUpon>
@@ -114,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="songsofspecificalbumform.resx">
+      <DependentUpon>songsofspecificalbumform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

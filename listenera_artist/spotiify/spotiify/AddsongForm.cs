@@ -28,6 +28,7 @@ namespace spotiify
             cmd.Connection = conn;
             cmd.CommandText = "GET_ALL_ALBUMS";
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("AID", Artist.AID);
             cmd.Parameters.Add("albumname", OracleDbType.RefCursor, ParameterDirection.Output);
             OracleDataReader r = cmd.ExecuteReader();
             while (r.Read())

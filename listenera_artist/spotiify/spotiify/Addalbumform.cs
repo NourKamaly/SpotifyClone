@@ -34,7 +34,7 @@ namespace spotiify
 
         }
 
-        private void Addsongbutton_Click(object sender, EventArgs e)
+        private void Addalbumbutton_Click(object sender, EventArgs e)
         {
             int maxId, newId;
             OracleCommand cmr = new OracleCommand();

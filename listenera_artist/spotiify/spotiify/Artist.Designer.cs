@@ -35,11 +35,14 @@ namespace spotiify
             this.label3 = new System.Windows.Forms.Label();
             this.Addsongbutton = new System.Windows.Forms.Button();
             this.AddAlbumbutton = new System.Windows.Forms.Button();
-            this.AddEventbutton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.songslist = new System.Windows.Forms.ListBox();
             this.editbiobutton = new System.Windows.Forms.Button();
+            this.albumslist = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addconertbutton = new System.Windows.Forms.Button();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -106,51 +109,27 @@ namespace spotiify
             this.AddAlbumbutton.UseVisualStyleBackColor = false;
             this.AddAlbumbutton.Click += new System.EventHandler(this.AddAlbumbutton_Click);
             // 
-            // AddEventbutton
-            // 
-            this.AddEventbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.AddEventbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddEventbutton.Location = new System.Drawing.Point(29, 326);
-            this.AddEventbutton.Name = "AddEventbutton";
-            this.AddEventbutton.Size = new System.Drawing.Size(139, 44);
-            this.AddEventbutton.TabIndex = 6;
-            this.AddEventbutton.Text = "Add Event";
-            this.AddEventbutton.UseVisualStyleBackColor = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(330, 101);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(486, 189);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Album";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(423, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 44);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Albums";
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.songslist);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(330, 298);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(486, 191);
+            this.groupBox3.Size = new System.Drawing.Size(486, 205);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Songs";
+            // 
+            // songslist
+            // 
+            this.songslist.FormattingEnabled = true;
+            this.songslist.ItemHeight = 29;
+            this.songslist.Location = new System.Drawing.Point(6, 42);
+            this.songslist.Name = "songslist";
+            this.songslist.Size = new System.Drawing.Size(474, 149);
+            this.songslist.TabIndex = 28;
             // 
             // editbiobutton
             // 
@@ -164,16 +143,50 @@ namespace spotiify
             this.editbiobutton.UseVisualStyleBackColor = false;
             this.editbiobutton.Click += new System.EventHandler(this.editbiobutton_Click);
             // 
+            // albumslist
+            // 
+            this.albumslist.FormattingEnabled = true;
+            this.albumslist.ItemHeight = 29;
+            this.albumslist.Location = new System.Drawing.Point(6, 34);
+            this.albumslist.Name = "albumslist";
+            this.albumslist.Size = new System.Drawing.Size(474, 149);
+            this.albumslist.TabIndex = 27;
+            this.albumslist.SelectedIndexChanged += new System.EventHandler(this.albumslist_SelectedIndexChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.albumslist);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(330, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(486, 225);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Albums";
+            // 
+            // addconertbutton
+            // 
+            this.addconertbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.addconertbutton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addconertbutton.Location = new System.Drawing.Point(29, 321);
+            this.addconertbutton.Name = "addconertbutton";
+            this.addconertbutton.Size = new System.Drawing.Size(139, 44);
+            this.addconertbutton.TabIndex = 29;
+            this.addconertbutton.Text = "Add Concert";
+            this.addconertbutton.UseVisualStyleBackColor = false;
+            this.addconertbutton.Click += new System.EventHandler(this.addconertbutton_Click);
+            // 
             // Artist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 533);
+            this.Controls.Add(this.addconertbutton);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.editbiobutton);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.AddEventbutton);
             this.Controls.Add(this.AddAlbumbutton);
             this.Controls.Add(this.Addsongbutton);
             this.Controls.Add(this.artistBio);
@@ -183,6 +196,8 @@ namespace spotiify
             this.Name = "Artist";
             this.Text = "Artist";
             this.Load += new System.EventHandler(this.Artist_Load);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,10 +211,11 @@ namespace spotiify
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Addsongbutton;
         private System.Windows.Forms.Button AddAlbumbutton;
-        private System.Windows.Forms.Button AddEventbutton;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button editbiobutton;
+        private System.Windows.Forms.ListBox albumslist;
+        private System.Windows.Forms.ListBox songslist;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button addconertbutton;
     }
 }

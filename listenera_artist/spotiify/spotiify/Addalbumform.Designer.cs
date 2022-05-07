@@ -29,24 +29,24 @@ namespace spotiify
         /// </summary>
         private void InitializeComponent()
         {
-            this.Addsongbutton = new System.Windows.Forms.Button();
+            this.Addalbumbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.albumnametextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.typeofalbum = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // Addsongbutton
+            // Addalbumbutton
             // 
-            this.Addsongbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Addsongbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addsongbutton.Location = new System.Drawing.Point(307, 303);
-            this.Addsongbutton.Name = "Addsongbutton";
-            this.Addsongbutton.Size = new System.Drawing.Size(139, 44);
-            this.Addsongbutton.TabIndex = 31;
-            this.Addsongbutton.Text = "Add Album";
-            this.Addsongbutton.UseVisualStyleBackColor = false;
-            this.Addsongbutton.Click += new System.EventHandler(this.Addsongbutton_Click);
+            this.Addalbumbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Addalbumbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addalbumbutton.Location = new System.Drawing.Point(307, 303);
+            this.Addalbumbutton.Name = "Addalbumbutton";
+            this.Addalbumbutton.Size = new System.Drawing.Size(139, 44);
+            this.Addalbumbutton.TabIndex = 31;
+            this.Addalbumbutton.Text = "Add Album";
+            this.Addalbumbutton.UseVisualStyleBackColor = false;
+            this.Addalbumbutton.Click += new System.EventHandler(this.Addalbumbutton_Click);
             // 
             // label1
             // 
@@ -92,7 +92,7 @@ namespace spotiify
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.typeofalbum);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Addsongbutton);
+            this.Controls.Add(this.Addalbumbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.albumnametextbox);
             this.Name = "Addalbumform";
@@ -105,7 +105,7 @@ namespace spotiify
 
         #endregion
 
-        private System.Windows.Forms.Button Addsongbutton;
+        private System.Windows.Forms.Button Addalbumbutton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox albumnametextbox;
         private System.Windows.Forms.Label label3;
