@@ -44,9 +44,9 @@ namespace Spotify
         {
             
            
-            string constr = "Data Source = orcl; User Id = scott; Password= scott;";
+            string constr = "Data Source = orcl; User Id = scott; Password= tiger;";
 
-            string k = @"select songid ,sname , firstname from songs , artists  where songs.artistid= artists.artistid";
+            string k = @"select songid ,name , firstname from songs , artists  where songs.artistid= artists.artistid";
 
             adapter = new OracleDataAdapter(k, constr);
 
@@ -55,7 +55,7 @@ namespace Spotify
 
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                Songid.Add(ds.Tables[0].Rows[i]["songid"].ToString(), new KeyValuePair<string, string>(ds.Tables[0].Rows[i]["sname"].ToString(), ds.Tables[0].Rows[i]["firstname"].ToString()));
+                Songid.Add(ds.Tables[0].Rows[i]["songid"].ToString(), new KeyValuePair<string, string>(ds.Tables[0].Rows[i]["name"].ToString(), ds.Tables[0].Rows[i]["firstname"].ToString()));
             }
             foreach (KeyValuePair<string, KeyValuePair<string, string>> entry in Songid)
             {

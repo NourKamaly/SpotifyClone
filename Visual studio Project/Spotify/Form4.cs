@@ -25,11 +25,11 @@ namespace Spotify
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            string constr = "Data Source = orcl; User Id = scott; Password= scott;";
+            string constr = "Data Source = orcl; User Id = scott; Password= tiger;";
 
-            string cmdstr = @"select sname,songid, firstname, lengthofsong
-                               from songs s, artists a
-                                where a.artistid = s.artistid";
+            string cmdstr = @"select name,songid, firstname, lengthofsong
+                               from songs s, artists z
+                                where z.artistid = s.artistid";
 
             adapter = new OracleDataAdapter(cmdstr, constr);
             ds = new DataSet();
@@ -37,14 +37,14 @@ namespace Spotify
 
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                Songid.Add(ds.Tables[0].Rows[i]["sname"].ToString(), ds.Tables[0].Rows[i]["songid"].ToString());
-                checkedListBox1.Items.Add(ds.Tables[0].Rows[i]["sname"].ToString() + " - "+ ds.Tables[0].Rows[i]["firstname"].ToString());
+                Songid.Add(ds.Tables[0].Rows[i]["name"].ToString(), ds.Tables[0].Rows[i]["songid"].ToString());
+                checkedListBox1.Items.Add(ds.Tables[0].Rows[i]["name"].ToString() + " - "+ ds.Tables[0].Rows[i]["firstname"].ToString());
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string constr = "Data Source = orcl; User Id = scott; Password= scott;";
+            string constr = "Data Source = orcl; User Id = scott; Password= tiger;";
 
             string cmdstr = @"select *
                                 from Playlists";

@@ -71,24 +71,28 @@ namespace Spotify
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string constr = "Data Source = orcl; User Id = scott; Password= scott;";
+            string constr = "Data Source = orcl; User Id = scott; Password= tiger;";
 
-            string cmdstr = @"select sname, firstname, lengthofsong
-                               from songs s, artists a
-                                where a.artistid = s.artistid";
+            string cmdstr = @"select name, firstname, lengthofsong from songs s, artists z where z.artistid = s.artistid";
 
             adapter = new OracleDataAdapter(cmdstr, constr);
             
             ds = new DataSet();
-            adapter.Fill(ds);
-
+            try
+            {
+                adapter.Fill(ds);
+            }
+            catch 
+            {
+                MessageBox.Show("no songs");
+            }
 
 
             
             for (int i =0; i<  ds.Tables[0].Rows.Count; i++)
             {
                 string[] s = new string[3];
-                s[0] = ds.Tables[0].Rows[i]["sname"].ToString();
+                s[0] = ds.Tables[0].Rows[i]["name"].ToString();
                 s[1] = ds.Tables[0].Rows[i]["firstname"].ToString();
                 s[2] = ds.Tables[0].Rows[i]["lengthofsong"].ToString();
 

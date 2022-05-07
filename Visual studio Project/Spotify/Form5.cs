@@ -15,7 +15,7 @@ namespace Spotify
 {
     public partial class Login : Form
     {
-        string ordb = "Data Source = orcl; User Id = scott; Password= scott;";
+        string ordb = "Data Source = orcl; User Id = scott; Password= tiger;";
         OracleConnection conn;
         OracleDataAdapter adapter;
         OracleCommandBuilder builder;
