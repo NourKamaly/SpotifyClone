@@ -35,27 +35,38 @@ namespace spotiify
             l.Show();
         }
 
+        private void getLastId(string type) 
+        {
+
+  
+
+        }
         private void Signupbutton_Click(object sender, EventArgs e)
         {
 
-         
             int maxId, newId;
             OracleCommand cmr = new OracleCommand();
             cmr.Connection = conn;
-            cmr.CommandText = "getartist";
+            if (type.Text == "Artist") 
+            {
+                cmr.CommandText = "get_artist_id";
+            }
+            else 
+            {
+                cmr.CommandText = "get_listener_id";
+            }
             cmr.CommandType = CommandType.StoredProcedure;
-            cmr.Parameters.Add("AID", OracleDbType.Int32,ParameterDirection.Output);
+            cmr.Parameters.Add("AID", OracleDbType.Int32, ParameterDirection.Output);
             cmr.ExecuteNonQuery();
-            try 
+            try
             {
                 maxId = Convert.ToInt32(cmr.Parameters["AID"].Value.ToString());
                 newId = maxId + 1;
             }
-            catch 
+            catch
             {
                 newId = 1;
             }
-
 
             if (type.Text == "Artist") 
             {
@@ -66,9 +77,8 @@ namespace spotiify
                 cmd.Parameters.Add("newid", newId);
                 cmd.Parameters.Add("fname", signupName.Text);
                 cmd.Parameters.Add("lname", secondNametextbox.Text);
-                cmd.Parameters.Add("pass", Passwordtextbox.Text);
                 cmd.Parameters.Add("email", emailtextbox.Text);
-                cmd.Parameters.Add("dateofbirth", Convert.ToDateTime(dateofbirth.Text));
+                cmd.Parameters.Add("pass", Passwordtextbox.Text);
                 OracleDataReader dr = cmd.ExecuteReader();
             }
             else 
@@ -80,9 +90,8 @@ namespace spotiify
                 cmd.Parameters.Add("newid", newId);
                 cmd.Parameters.Add("fname", signupName.Text);
                 cmd.Parameters.Add("lname", secondNametextbox.Text);
-                cmd.Parameters.Add("pass", Passwordtextbox.Text);
                 cmd.Parameters.Add("email", emailtextbox.Text);
-                cmd.Parameters.Add("dateofbirth", Convert.ToDateTime(dateofbirth.Text));
+                cmd.Parameters.Add("pass", Passwordtextbox.Text);
                 OracleDataReader dr = cmd.ExecuteReader();
             }
 

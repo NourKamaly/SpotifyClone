@@ -50,11 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Addalbumform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addalbumform.Designer.cs">
+      <DependentUpon>Addalbumform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddsongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddsongForm.Designer.cs">
+      <DependentUpon>AddsongForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Artist.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Artist.Designer.cs">
       <DependentUpon>Artist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BioForm.Designer.cs">
+      <DependentUpon>BioForm.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -70,8 +88,17 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Addalbumform.resx">
+      <DependentUpon>Addalbumform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddsongForm.resx">
+      <DependentUpon>AddsongForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Artist.resx">
       <DependentUpon>Artist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BioForm.resx">
+      <DependentUpon>BioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -102,4 +129,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

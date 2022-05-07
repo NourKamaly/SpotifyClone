@@ -31,7 +31,6 @@ namespace spotiify
         {
             this.label1 = new System.Windows.Forms.Label();
             this.emailtextbox = new System.Windows.Forms.TextBox();
-            this.bithdatelabel = new System.Windows.Forms.Label();
             this.Signupbutton = new System.Windows.Forms.Button();
             this.passwordlabel = new System.Windows.Forms.Label();
             this.Passwordtextbox = new System.Windows.Forms.TextBox();
@@ -41,7 +40,6 @@ namespace spotiify
             this.signupName = new System.Windows.Forms.TextBox();
             this.type = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateofbirth = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -62,16 +60,6 @@ namespace spotiify
             this.emailtextbox.Name = "emailtextbox";
             this.emailtextbox.Size = new System.Drawing.Size(273, 32);
             this.emailtextbox.TabIndex = 41;
-            // 
-            // bithdatelabel
-            // 
-            this.bithdatelabel.AutoSize = true;
-            this.bithdatelabel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bithdatelabel.Location = new System.Drawing.Point(208, 233);
-            this.bithdatelabel.Name = "bithdatelabel";
-            this.bithdatelabel.Size = new System.Drawing.Size(114, 23);
-            this.bithdatelabel.TabIndex = 39;
-            this.bithdatelabel.Text = "date of birth";
             // 
             // Signupbutton
             // 
@@ -142,7 +130,7 @@ namespace spotiify
             // 
             this.type.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.type.FormattingEnabled = true;
-            this.type.Location = new System.Drawing.Point(333, 288);
+            this.type.Location = new System.Drawing.Point(333, 240);
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(273, 32);
             this.type.TabIndex = 43;
@@ -151,19 +139,11 @@ namespace spotiify
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 296);
+            this.label2.Location = new System.Drawing.Point(259, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 24);
             this.label2.TabIndex = 44;
             this.label2.Text = "Type";
-            // 
-            // dateofbirth
-            // 
-            this.dateofbirth.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateofbirth.Location = new System.Drawing.Point(333, 235);
-            this.dateofbirth.Name = "dateofbirth";
-            this.dateofbirth.Size = new System.Drawing.Size(273, 32);
-            this.dateofbirth.TabIndex = 45;
             // 
             // button1
             // 
@@ -182,12 +162,10 @@ namespace spotiify
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateofbirth);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.type);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.emailtextbox);
-            this.Controls.Add(this.bithdatelabel);
             this.Controls.Add(this.Signupbutton);
             this.Controls.Add(this.passwordlabel);
             this.Controls.Add(this.Passwordtextbox);
@@ -207,7 +185,6 @@ namespace spotiify
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox emailtextbox;
-        private System.Windows.Forms.Label bithdatelabel;
         private System.Windows.Forms.Button Signupbutton;
         private System.Windows.Forms.Label passwordlabel;
         private System.Windows.Forms.TextBox Passwordtextbox;
@@ -217,7 +194,6 @@ namespace spotiify
         private System.Windows.Forms.TextBox signupName;
         private System.Windows.Forms.ComboBox type;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox dateofbirth;
         private System.Windows.Forms.Button button1;
     }
 }
