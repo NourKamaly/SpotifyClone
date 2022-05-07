@@ -45,11 +45,11 @@ namespace spotiify
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(946, 295);
+            this.label2.Location = new System.Drawing.Point(943, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 17);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.label2.Text = "Name....";
             // 
             // concertdetailsform
             // 
