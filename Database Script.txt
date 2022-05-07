@@ -89,7 +89,6 @@ add foreign key (playlistID) references Playlists (playlistID) on delete cascade
 alter table PlaylistDetails
 add foreign key (songID) references Song (songID) on delete cascade;
 
-# there is an issue with this table so you may find an error when running the following code
 create ArtistsFollowers (
    artistID int,
    listenerID int,
