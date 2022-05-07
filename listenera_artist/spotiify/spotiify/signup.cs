@@ -96,5 +96,74 @@ namespace spotiify
             }
 
         }
+
+        private void enterfirstnametext(object sender, EventArgs e)
+        {
+            if (signupName.Text == "First Name")
+            {
+                signupName.Text = "";
+            }
+        }
+
+        private void leavefirstnametext(object sender, EventArgs e)
+        {
+            if (signupName.Text == "")
+            {
+                signupName.Text = "First Name";
+            }
+        }
+
+        private void entersecondnametext(object sender, EventArgs e)
+        {
+
+            if (secondNametextbox.Text == "Second Name")
+            {
+                secondNametextbox.Text = "";
+            }
+        }
+
+        private void leavesecondnametext(object sender, EventArgs e)
+        {
+            if (secondNametextbox.Text == "")
+            {
+                secondNametextbox.Text = "Second Name";
+            }
+        }
+
+        private void enterpasswordtext(object sender, EventArgs e)
+        {
+            if (Passwordtextbox.Text == "Password")
+            {
+                Passwordtextbox.Text = "";
+                Passwordtextbox.PasswordChar = '*';
+            }
+        }
+
+        private void leavepasswordtext(object sender, EventArgs e)
+        {
+
+            if (Passwordtextbox.Text == "")
+            {
+                Passwordtextbox.PasswordChar = '\0';
+                Passwordtextbox.Text = "Password";
+
+            }
+        }
+
+        private void enteremailtext(object sender, EventArgs e)
+        {
+            if (emailtextbox.Text == "Email")
+            {
+                emailtextbox.Text = "";
+            }
+        }
+
+        private void leaveemailtext(object sender, EventArgs e)
+        {
+            if (emailtextbox.Text == "")
+            {
+                emailtextbox.Text = "Email";
+            }
+        }
     }
 }

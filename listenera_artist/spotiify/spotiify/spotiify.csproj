@@ -126,6 +126,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
@@ -145,6 +146,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\loginimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\signupimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\artistimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\saliba.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

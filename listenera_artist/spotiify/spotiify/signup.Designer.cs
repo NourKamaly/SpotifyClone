@@ -29,151 +29,138 @@ namespace spotiify
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.emailtextbox = new System.Windows.Forms.TextBox();
             this.Signupbutton = new System.Windows.Forms.Button();
-            this.passwordlabel = new System.Windows.Forms.Label();
             this.Passwordtextbox = new System.Windows.Forms.TextBox();
-            this.SecondName = new System.Windows.Forms.Label();
             this.secondNametextbox = new System.Windows.Forms.TextBox();
-            this.Firstname = new System.Windows.Forms.Label();
             this.signupName = new System.Windows.Forms.TextBox();
             this.type = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(259, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 24);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Email";
             // 
             // emailtextbox
             // 
-            this.emailtextbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailtextbox.Location = new System.Drawing.Point(333, 131);
+            this.emailtextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.emailtextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailtextbox.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.emailtextbox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.emailtextbox.Location = new System.Drawing.Point(521, 391);
+            this.emailtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailtextbox.Name = "emailtextbox";
-            this.emailtextbox.Size = new System.Drawing.Size(273, 32);
+            this.emailtextbox.Size = new System.Drawing.Size(232, 17);
             this.emailtextbox.TabIndex = 41;
+            this.emailtextbox.Text = "Email";
+            this.emailtextbox.Enter += new System.EventHandler(this.enteremailtext);
+            this.emailtextbox.Leave += new System.EventHandler(this.leaveemailtext);
             // 
             // Signupbutton
             // 
+            this.Signupbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.Signupbutton.FlatAppearance.BorderSize = 0;
+            this.Signupbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Signupbutton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Signupbutton.Location = new System.Drawing.Point(283, 364);
+            this.Signupbutton.ForeColor = System.Drawing.Color.White;
+            this.Signupbutton.Location = new System.Drawing.Point(532, 483);
+            this.Signupbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Signupbutton.Name = "Signupbutton";
-            this.Signupbutton.Size = new System.Drawing.Size(110, 52);
+            this.Signupbutton.Size = new System.Drawing.Size(260, 39);
             this.Signupbutton.TabIndex = 38;
             this.Signupbutton.Text = "Sign Up";
-            this.Signupbutton.UseVisualStyleBackColor = true;
+            this.Signupbutton.UseVisualStyleBackColor = false;
             this.Signupbutton.Click += new System.EventHandler(this.Signupbutton_Click);
-            // 
-            // passwordlabel
-            // 
-            this.passwordlabel.AutoSize = true;
-            this.passwordlabel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordlabel.Location = new System.Drawing.Point(230, 190);
-            this.passwordlabel.Name = "passwordlabel";
-            this.passwordlabel.Size = new System.Drawing.Size(88, 23);
-            this.passwordlabel.TabIndex = 37;
-            this.passwordlabel.Text = "Password";
             // 
             // Passwordtextbox
             // 
-            this.Passwordtextbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Passwordtextbox.Location = new System.Drawing.Point(333, 181);
+            this.Passwordtextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Passwordtextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Passwordtextbox.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.Passwordtextbox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.Passwordtextbox.Location = new System.Drawing.Point(521, 345);
+            this.Passwordtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Passwordtextbox.Name = "Passwordtextbox";
-            this.Passwordtextbox.Size = new System.Drawing.Size(273, 32);
+            this.Passwordtextbox.Size = new System.Drawing.Size(232, 17);
             this.Passwordtextbox.TabIndex = 36;
-            // 
-            // SecondName
-            // 
-            this.SecondName.AutoSize = true;
-            this.SecondName.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondName.Location = new System.Drawing.Point(195, 91);
-            this.SecondName.Name = "SecondName";
-            this.SecondName.Size = new System.Drawing.Size(127, 23);
-            this.SecondName.TabIndex = 35;
-            this.SecondName.Text = "Second Name";
+            this.Passwordtextbox.Text = "Password";
+            this.Passwordtextbox.Enter += new System.EventHandler(this.enterpasswordtext);
+            this.Passwordtextbox.Leave += new System.EventHandler(this.leavepasswordtext);
             // 
             // secondNametextbox
             // 
-            this.secondNametextbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondNametextbox.Location = new System.Drawing.Point(333, 83);
+            this.secondNametextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.secondNametextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secondNametextbox.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.secondNametextbox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.secondNametextbox.Location = new System.Drawing.Point(521, 300);
+            this.secondNametextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.secondNametextbox.Name = "secondNametextbox";
-            this.secondNametextbox.Size = new System.Drawing.Size(273, 32);
+            this.secondNametextbox.Size = new System.Drawing.Size(232, 17);
             this.secondNametextbox.TabIndex = 34;
-            // 
-            // Firstname
-            // 
-            this.Firstname.AutoSize = true;
-            this.Firstname.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Firstname.Location = new System.Drawing.Point(224, 43);
-            this.Firstname.Name = "Firstname";
-            this.Firstname.Size = new System.Drawing.Size(98, 23);
-            this.Firstname.TabIndex = 33;
-            this.Firstname.Text = "First name";
+            this.secondNametextbox.Text = "Second Name";
+            this.secondNametextbox.Enter += new System.EventHandler(this.entersecondnametext);
+            this.secondNametextbox.Leave += new System.EventHandler(this.leavesecondnametext);
             // 
             // signupName
             // 
-            this.signupName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupName.Location = new System.Drawing.Point(333, 34);
+            this.signupName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.signupName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.signupName.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.signupName.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.signupName.Location = new System.Drawing.Point(521, 253);
+            this.signupName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signupName.Name = "signupName";
-            this.signupName.Size = new System.Drawing.Size(273, 32);
+            this.signupName.Size = new System.Drawing.Size(232, 17);
             this.signupName.TabIndex = 32;
+            this.signupName.Text = "First Name";
+            this.signupName.Enter += new System.EventHandler(this.enterfirstnametext);
+            this.signupName.Leave += new System.EventHandler(this.leavefirstnametext);
             // 
             // type
             // 
-            this.type.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.type.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.type.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.type.FormattingEnabled = true;
-            this.type.Location = new System.Drawing.Point(333, 240);
+            this.type.Location = new System.Drawing.Point(516, 437);
+            this.type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(273, 32);
+            this.type.Size = new System.Drawing.Size(289, 25);
             this.type.TabIndex = 43;
+            this.type.Text = "Type";
             // 
-            // label2
+            // loginbutton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 248);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 24);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Type";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(507, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 54);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.loginbutton.FlatAppearance.BorderSize = 0;
+            this.loginbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginbutton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginbutton.ForeColor = System.Drawing.Color.White;
+            this.loginbutton.Location = new System.Drawing.Point(532, 571);
+            this.loginbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loginbutton.Name = "loginbutton";
+            this.loginbutton.Size = new System.Drawing.Size(260, 36);
+            this.loginbutton.TabIndex = 46;
+            this.loginbutton.Text = "Login";
+            this.loginbutton.UseVisualStyleBackColor = false;
+            this.loginbutton.Click += new System.EventHandler(this.button1_Click);
             // 
             // signup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
+            this.BackgroundImage = global::spotiify.Properties.Resources.signupimage;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1318, 680);
+            this.Controls.Add(this.loginbutton);
             this.Controls.Add(this.type);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.emailtextbox);
             this.Controls.Add(this.Signupbutton);
-            this.Controls.Add(this.passwordlabel);
             this.Controls.Add(this.Passwordtextbox);
-            this.Controls.Add(this.SecondName);
             this.Controls.Add(this.secondNametextbox);
-            this.Controls.Add(this.Firstname);
             this.Controls.Add(this.signupName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "signup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "signup";
             this.Load += new System.EventHandler(this.signup_Load);
             this.ResumeLayout(false);
@@ -182,18 +169,12 @@ namespace spotiify
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox emailtextbox;
         private System.Windows.Forms.Button Signupbutton;
-        private System.Windows.Forms.Label passwordlabel;
         private System.Windows.Forms.TextBox Passwordtextbox;
-        private System.Windows.Forms.Label SecondName;
         private System.Windows.Forms.TextBox secondNametextbox;
-        private System.Windows.Forms.Label Firstname;
         private System.Windows.Forms.TextBox signupName;
         private System.Windows.Forms.ComboBox type;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginbutton;
     }
 }

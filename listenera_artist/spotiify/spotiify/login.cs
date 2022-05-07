@@ -92,6 +92,42 @@ namespace spotiify
            
         }
 
+        private void emailtextenter(object sender, EventArgs e)
+        {
+            if (emailtextbox.Text == "Email") 
+            {
+                emailtextbox.Text = "";
+            }
+        }
+
+        private void emailtextleave(object sender, EventArgs e)
+        {
+            if (emailtextbox.Text == "") 
+            {
+                emailtextbox.Text = "Email";
+            }
+        }
+
+        private void passowrdtextenter(object sender, EventArgs e)
+        {
+            if (Passwordtextbox.Text == "Password") 
+            {
+                Passwordtextbox.Text = "";
+                Passwordtextbox.PasswordChar = '*';
+            }
+
+        }
+
+        private void passwordtextleave(object sender, EventArgs e)
+        {
+            if (Passwordtextbox.Text=="") 
+            {
+                Passwordtextbox.PasswordChar= '\0';
+                Passwordtextbox.Text = "Password";
+             
+            }
+        }
+
         private void NameLabel_Click(object sender, EventArgs e)
         {
 
