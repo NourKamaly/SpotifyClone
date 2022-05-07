@@ -113,6 +113,16 @@ namespace spotiify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap concertdetailsimage {
+            get {
+                object obj = ResourceManager.GetObject("concertdetailsimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginimage {
             get {
                 object obj = ResourceManager.GetObject("loginimage", resourceCulture);
