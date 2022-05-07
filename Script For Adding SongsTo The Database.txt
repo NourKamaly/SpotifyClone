@@ -1,0 +1,139 @@
+-- Artists Insertion
+
+
+INSERT INTO artists
+(artistid, firstname, email, pass, bio)
+VALUES
+(1, 'The Weekend','Theweekend@gmail.com', '12345' , 'Im the weekend the best artist ever');
+
+INSERT INTO artists
+(artistid, firstname, email, pass, bio)
+VALUES
+(2, 'Daft punk','Daft-punk@gmail.com', '123456' , 'Hello folks, Daft punk is rocking');
+
+INSERT INTO artists
+(artistid, firstname, email, pass, bio)
+VALUES
+(3, 'Tamino','Tamino@gmail.com', '1234' , 'Tamino is the greatest Egyptian artist');
+
+INSERT INTO artists
+(artistid, firstname, email, pass, bio)
+VALUES
+(4, 'Neighbourhood','neighbourhood@gmail.com', '123' , 'The neighbourhood is a really nice band you should listen to <3');
+
+INSERT INTO artists
+(artistid, firstname, email, pass, bio)
+VALUES
+(5, 'Tame Impala','TameImpala@gmail.com', '1234567' , 'Tame Impala needs no bio. The name itself is descriptive enough.');
+
+
+-- Songs Insersion
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(1, 'Blinding lights',1, 3.2, 1);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(2, 'Die For You',1, 4.2, 1);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(3, 'Save Your Tears',1, 3.35, 1);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(4, 'Starboy',1, 3.5, 1);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(5, 'After Hours',1, 6.01 , 1);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(6, 'In Your Eyes',1, 3.57 , 1);
+
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(7, 'Get Lucky',1, 4.08 , 2);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(8, 'One More Time',1, 5.2 , 2);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(9, 'Instant Crush',1, 5.37 , 2);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(10, 'Lose Yourself to Dance',1, 5.53 , 2);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(11, 'Something About Us',1, 3.52 , 2);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(12, 'Giorgio by Moroder',1, 9.04 , 2);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(13, 'Habibi',1, 5.1 , 3);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(14, 'Cigar',1, 4.01 , 3);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(15, 'Indigo Night',1, 4.15 , 3);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(16, 'Tummy',1, 3.1 , 3);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(17, 'The First Disciple',1, 6.02 , 3);
+
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(18, 'Compass',1, 2.52 , 4);
+
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(18, 'Compass',1, 2.52 , 4);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(19, 'Let It Happen',1, 7.55 , 5);
+
+INSERT INTO songs
+(songid, sname, issingle, lengthofsong, artistid)
+VALUES
+(20, 'Borderline',1, 4.35 , 5);
+
