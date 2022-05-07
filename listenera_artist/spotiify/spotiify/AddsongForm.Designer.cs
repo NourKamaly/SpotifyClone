@@ -29,77 +29,62 @@ namespace spotiify
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.lengthofsongtextbox = new System.Windows.Forms.TextBox();
-            this.NameLabel = new System.Windows.Forms.Label();
             this.songnametextbox = new System.Windows.Forms.TextBox();
             this.typeofsong = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.Addsongbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 24);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Length of Song";
-            // 
             // lengthofsongtextbox
             // 
-            this.lengthofsongtextbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lengthofsongtextbox.Location = new System.Drawing.Point(333, 142);
+            this.lengthofsongtextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lengthofsongtextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lengthofsongtextbox.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.lengthofsongtextbox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lengthofsongtextbox.Location = new System.Drawing.Point(597, 344);
             this.lengthofsongtextbox.Name = "lengthofsongtextbox";
-            this.lengthofsongtextbox.Size = new System.Drawing.Size(287, 32);
+            this.lengthofsongtextbox.Size = new System.Drawing.Size(271, 21);
             this.lengthofsongtextbox.TabIndex = 20;
-            // 
-            // NameLabel
-            // 
-            this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(199, 88);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(112, 24);
-            this.NameLabel.TabIndex = 19;
-            this.NameLabel.Text = "Song Name";
+            this.lengthofsongtextbox.Text = "Length of Song";
+            this.lengthofsongtextbox.Enter += new System.EventHandler(this.enterlengthtext);
+            this.lengthofsongtextbox.Leave += new System.EventHandler(this.leavelengthtext);
             // 
             // songnametextbox
             // 
-            this.songnametextbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.songnametextbox.Location = new System.Drawing.Point(333, 80);
+            this.songnametextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.songnametextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.songnametextbox.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.songnametextbox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.songnametextbox.Location = new System.Drawing.Point(597, 292);
             this.songnametextbox.Name = "songnametextbox";
-            this.songnametextbox.Size = new System.Drawing.Size(287, 32);
+            this.songnametextbox.Size = new System.Drawing.Size(271, 21);
             this.songnametextbox.TabIndex = 18;
+            this.songnametextbox.Text = "Song Name";
+            this.songnametextbox.Enter += new System.EventHandler(this.entersongnametext);
+            this.songnametextbox.Leave += new System.EventHandler(this.leavesongnametext);
             // 
             // typeofsong
             // 
-            this.typeofsong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeofsong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.typeofsong.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.typeofsong.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.typeofsong.FormattingEnabled = true;
-            this.typeofsong.Location = new System.Drawing.Point(333, 199);
+            this.typeofsong.Location = new System.Drawing.Point(591, 413);
             this.typeofsong.Name = "typeofsong";
-            this.typeofsong.Size = new System.Drawing.Size(287, 32);
+            this.typeofsong.Size = new System.Drawing.Size(337, 29);
             this.typeofsong.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(184, 207);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 24);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Type of Song";
+            this.typeofsong.Text = "Album Type";
             // 
             // Addsongbutton
             // 
-            this.Addsongbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Addsongbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addsongbutton.Location = new System.Drawing.Point(333, 325);
+            this.Addsongbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.Addsongbutton.FlatAppearance.BorderSize = 0;
+            this.Addsongbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Addsongbutton.Font = new System.Drawing.Font("Tahoma", 12.8F);
+            this.Addsongbutton.ForeColor = System.Drawing.Color.White;
+            this.Addsongbutton.Location = new System.Drawing.Point(624, 561);
             this.Addsongbutton.Name = "Addsongbutton";
-            this.Addsongbutton.Size = new System.Drawing.Size(139, 44);
+            this.Addsongbutton.Size = new System.Drawing.Size(283, 46);
             this.Addsongbutton.TabIndex = 24;
             this.Addsongbutton.Text = "Add Song";
             this.Addsongbutton.UseVisualStyleBackColor = false;
@@ -109,15 +94,17 @@ namespace spotiify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.BackgroundImage = global::spotiify.Properties.Resources.addsongimage;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1520, 790);
             this.Controls.Add(this.Addsongbutton);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.typeofsong);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lengthofsongtextbox);
-            this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.songnametextbox);
+            this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Name = "AddsongForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddsongForm";
             this.Load += new System.EventHandler(this.AddsongForm_Load);
             this.ResumeLayout(false);
@@ -126,13 +113,9 @@ namespace spotiify
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox lengthofsongtextbox;
-        private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.TextBox songnametextbox;
         private System.Windows.Forms.ComboBox typeofsong;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Addsongbutton;
     }
 }

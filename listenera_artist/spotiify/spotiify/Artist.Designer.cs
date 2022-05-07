@@ -172,8 +172,10 @@ namespace spotiify
             this.Controls.Add(this.Addsongbutton);
             this.Controls.Add(this.artistBio);
             this.Controls.Add(this.artistName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Artist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artist";
             this.Load += new System.EventHandler(this.Artist_Load);
             this.ResumeLayout(false);

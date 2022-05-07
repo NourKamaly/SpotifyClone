@@ -23,7 +23,7 @@ namespace spotiify
 
         private void Addsongbutton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             AddsongForm obj = new AddsongForm();
             obj.Show();
         }
@@ -84,7 +84,6 @@ namespace spotiify
 
         private void editbiobutton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             BioForm f = new BioForm();
             f.Show();
         }
@@ -97,7 +96,6 @@ namespace spotiify
 
         private void AddAlbumbutton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Addalbumform obj = new Addalbumform();
             obj.Show();
         }

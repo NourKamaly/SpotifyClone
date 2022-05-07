@@ -128,6 +128,7 @@ namespace spotiify
             }
         }
 
+
         private void NameLabel_Click(object sender, EventArgs e)
         {
 

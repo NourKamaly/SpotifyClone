@@ -95,6 +95,40 @@ namespace spotiify
                 
             }
             OracleDataReader dr = cmd.ExecuteReader();
+            this.Hide();
+
+         }
+
+        private void entersongnametext(object sender, EventArgs e)
+        {
+            if (songnametextbox.Text == "Song Name")
+            {
+                songnametextbox.Text = "";
             }
         }
+
+        private void leavesongnametext(object sender, EventArgs e)
+        {
+            if (songnametextbox.Text == "")
+            {
+                songnametextbox.Text = "Song Name";
+            }
+        }
+
+        private void enterlengthtext(object sender, EventArgs e)
+        {
+            if (lengthofsongtextbox.Text == "Length of Song")
+            {
+                lengthofsongtextbox.Text = "";
+            }
+        }
+
+        private void leavelengthtext(object sender, EventArgs e)
+        {
+            if (lengthofsongtextbox.Text == "")
+            {
+                lengthofsongtextbox.Text = "Length of Song";
+            }
+        }
+    }
 }

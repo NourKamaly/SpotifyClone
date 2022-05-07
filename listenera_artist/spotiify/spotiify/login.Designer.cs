@@ -43,10 +43,10 @@ namespace spotiify
             this.signupbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signupbutton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signupbutton.ForeColor = System.Drawing.SystemColors.Window;
-            this.signupbutton.Location = new System.Drawing.Point(539, 508);
+            this.signupbutton.Location = new System.Drawing.Point(629, 625);
             this.signupbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signupbutton.Name = "signupbutton";
-            this.signupbutton.Size = new System.Drawing.Size(253, 36);
+            this.signupbutton.Size = new System.Drawing.Size(295, 44);
             this.signupbutton.TabIndex = 19;
             this.signupbutton.Text = "Signup";
             this.signupbutton.UseVisualStyleBackColor = false;
@@ -59,10 +59,10 @@ namespace spotiify
             this.loginbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbutton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loginbutton.Location = new System.Drawing.Point(539, 410);
+            this.loginbutton.Location = new System.Drawing.Point(629, 505);
             this.loginbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginbutton.Name = "loginbutton";
-            this.loginbutton.Size = new System.Drawing.Size(253, 43);
+            this.loginbutton.Size = new System.Drawing.Size(295, 53);
             this.loginbutton.TabIndex = 18;
             this.loginbutton.Text = "Login";
             this.loginbutton.UseVisualStyleBackColor = false;
@@ -74,10 +74,10 @@ namespace spotiify
             this.Passwordtextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Passwordtextbox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Passwordtextbox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Passwordtextbox.Location = new System.Drawing.Point(528, 316);
+            this.Passwordtextbox.Location = new System.Drawing.Point(616, 389);
             this.Passwordtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Passwordtextbox.Name = "Passwordtextbox";
-            this.Passwordtextbox.Size = new System.Drawing.Size(232, 17);
+            this.Passwordtextbox.Size = new System.Drawing.Size(271, 21);
             this.Passwordtextbox.TabIndex = 16;
             this.Passwordtextbox.Text = "Password";
             this.Passwordtextbox.Enter += new System.EventHandler(this.passowrdtextenter);
@@ -89,10 +89,10 @@ namespace spotiify
             this.emailtextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailtextbox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailtextbox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.emailtextbox.Location = new System.Drawing.Point(528, 267);
+            this.emailtextbox.Location = new System.Drawing.Point(616, 329);
             this.emailtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailtextbox.Name = "emailtextbox";
-            this.emailtextbox.Size = new System.Drawing.Size(232, 17);
+            this.emailtextbox.Size = new System.Drawing.Size(271, 21);
             this.emailtextbox.TabIndex = 14;
             this.emailtextbox.Text = "Email";
             this.emailtextbox.Enter += new System.EventHandler(this.emailtextenter);
@@ -105,20 +105,20 @@ namespace spotiify
             this.type.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.type.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.type.FormattingEnabled = true;
-            this.type.Location = new System.Drawing.Point(520, 359);
+            this.type.Location = new System.Drawing.Point(607, 442);
             this.type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(292, 25);
+            this.type.Size = new System.Drawing.Size(340, 29);
             this.type.TabIndex = 21;
             this.type.Text = "Type";
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::spotiify.Properties.Resources.loginimage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1334, 718);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.type);
             this.Controls.Add(this.signupbutton);
             this.Controls.Add(this.loginbutton);

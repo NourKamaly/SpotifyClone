@@ -37,6 +37,7 @@ namespace spotiify
             int r = cmd.ExecuteNonQuery();
             this.Hide();
             Artist obj = new Artist();
+            this.Hide();
             obj.Show();
         }
     }

@@ -62,6 +62,23 @@ namespace spotiify
             cmd.Parameters.Add("aaname", albumnametextbox.Text.ToString());
             cmd.Parameters.Add("sname", Artist.AID);
             OracleDataReader dr = cmd.ExecuteReader();
+            this.Hide();
+        }
+
+        private void enteralbumtext(object sender, EventArgs e)
+        {
+            if(albumnametextbox.Text=="Album Name") 
+            {
+                albumnametextbox.Text = "";
+            }
+        }
+
+        private void leavealbumtext(object sender, EventArgs e)
+        {
+            if (albumnametextbox.Text == "")
+            {
+                albumnametextbox.Text = "Album Name";
+            }
         }
     }
 }

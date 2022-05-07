@@ -159,6 +159,18 @@
   <ItemGroup>
     <None Include="images\saliba.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\addsongimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\addalbumimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\add concert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\addbioimage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"

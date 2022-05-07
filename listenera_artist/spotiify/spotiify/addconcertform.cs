@@ -49,6 +49,7 @@ namespace spotiify
             cmd.Parameters.Add("edate", concertdate.Value);
             cmd.Parameters.Add("eartistid", Artist.AID);
             OracleDataReader dr = cmd.ExecuteReader();
+            this.Hide();
         }
 
         public addconcertform()
