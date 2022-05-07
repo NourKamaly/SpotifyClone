@@ -1,8 +1,9 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace Spotify
 {
     static class Program
@@ -15,7 +16,7 @@ namespace Spotify
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ArtistrRepotForm());
+            Application.Run(new Login());
         }
     }
 }
