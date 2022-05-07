@@ -13,7 +13,7 @@ namespace spotiify
 {
     public partial class Artist : Form
     {
-        public static string AID = login.AID,albumname,ALID;
+        public static string AID = login.AID,albumname,ALID,COID;
         string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
         public Artist()
@@ -80,6 +80,22 @@ namespace spotiify
                 albumslist.Items.Add(r3[0]);
             }
             r3.Close();
+
+
+
+            //getting concerts  
+            OracleCommand cmd4 = new OracleCommand();
+            cmd4.Connection = conn;
+            cmd4.CommandText = "GET_CONCERTS";
+            cmd4.CommandType = CommandType.StoredProcedure;
+            cmd4.Parameters.Add("AID", Artist.AID);
+            cmd4.Parameters.Add("concertname", OracleDbType.RefCursor, ParameterDirection.Output);
+            OracleDataReader r4 = cmd4.ExecuteReader();
+            while (r4.Read())
+            {
+                concertslist.Items.Add(r4[0]);
+            }
+            r4.Close();
         }
 
         private void editbiobutton_Click(object sender, EventArgs e)
@@ -90,15 +106,26 @@ namespace spotiify
 
         private void addconertbutton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             addconcertform obj = new addconcertform();
             obj.Show();
         }
 
         private void concertslist_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string concert_name = concertslist.Text;
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "select eventid from Concerts  where ename=:concert_name";
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("concert_name", concert_name);
+            OracleDataReader r = cmd.ExecuteReader();
+            if (r.Read())
+            {
+                COID = r[0].ToString();
+            }
             concertdetailsform obj = new concertdetailsform();
             obj.Show();
-            /// here////////////////////////////////////////
         }
 
         private void AddAlbumbutton_Click(object sender, EventArgs e)

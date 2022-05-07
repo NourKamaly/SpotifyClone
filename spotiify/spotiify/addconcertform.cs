@@ -50,6 +50,8 @@ namespace spotiify
             cmd.Parameters.Add("eartistid", Artist.AID);
             OracleDataReader dr = cmd.ExecuteReader();
             this.Hide();
+            Artist obj = new Artist();
+            obj.Show();
         }
 
         public addconcertform()
