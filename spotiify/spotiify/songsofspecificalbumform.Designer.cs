@@ -1,7 +1,7 @@
 ﻿
 namespace spotiify
 {
-    partial class concertdetailsform
+    partial class songsofspecificalbumform
     {
         /// <summary>
         /// Required designer variable.
@@ -29,49 +29,39 @@ namespace spotiify
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.songsofalbumlist = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // label1
+            // songsofalbumlist
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(609, 268);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Concert Name";
+            this.songsofalbumlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.songsofalbumlist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.songsofalbumlist.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.songsofalbumlist.ForeColor = System.Drawing.Color.White;
+            this.songsofalbumlist.FormattingEnabled = true;
+            this.songsofalbumlist.ItemHeight = 24;
+            this.songsofalbumlist.Location = new System.Drawing.Point(528, 190);
+            this.songsofalbumlist.Name = "songsofalbumlist";
+            this.songsofalbumlist.Size = new System.Drawing.Size(463, 456);
+            this.songsofalbumlist.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(783, 268);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name....";
-            // 
-            // concertdetailsform
+            // songsofspecificalbumform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::spotiify.Properties.Resources.concertdetailsimage;
+            this.BackgroundImage = global::spotiify.Properties.Resources.songsofspecificalbumimage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1520, 789);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "concertdetailsform";
+            this.Controls.Add(this.songsofalbumlist);
+            this.Name = "songsofspecificalbumform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "concertdetailsform";
-            this.Load += new System.EventHandler(this.concertdetailsform_Load);
+            this.Text = "songsofspecificalbumform";
+            this.Load += new System.EventHandler(this.songsofspecificalbumform_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox songsofalbumlist;
     }
 }
