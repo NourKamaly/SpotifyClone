@@ -32,6 +32,8 @@ namespace spotiify
             this.Addalbumbutton = new System.Windows.Forms.Button();
             this.albumnametextbox = new System.Windows.Forms.TextBox();
             this.typeofalbum = new System.Windows.Forms.ComboBox();
+            this.backbutton = new System.Windows.Forms.Button();
+            this.statustext = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Addalbumbutton
@@ -75,6 +77,31 @@ namespace spotiify
             this.typeofalbum.TabIndex = 33;
             this.typeofalbum.Text = "Type of Album";
             // 
+            // backbutton
+            // 
+            this.backbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.backbutton.BackgroundImage = global::spotiify.Properties.Resources.backbutton;
+            this.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backbutton.FlatAppearance.BorderSize = 0;
+            this.backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbutton.Location = new System.Drawing.Point(130, 40);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(40, 40);
+            this.backbutton.TabIndex = 34;
+            this.backbutton.UseVisualStyleBackColor = false;
+            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
+            // 
+            // statustext
+            // 
+            this.statustext.AutoSize = true;
+            this.statustext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.statustext.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.statustext.Location = new System.Drawing.Point(699, 436);
+            this.statustext.Name = "statustext";
+            this.statustext.Size = new System.Drawing.Size(121, 17);
+            this.statustext.TabIndex = 35;
+            this.statustext.Text = "added successfully";
+            // 
             // Addalbumform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -82,9 +109,12 @@ namespace spotiify
             this.BackgroundImage = global::spotiify.Properties.Resources.addalbumimage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1538, 837);
+            this.Controls.Add(this.statustext);
+            this.Controls.Add(this.backbutton);
             this.Controls.Add(this.typeofalbum);
             this.Controls.Add(this.Addalbumbutton);
             this.Controls.Add(this.albumnametextbox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Addalbumform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Addalbumform";
@@ -99,5 +129,7 @@ namespace spotiify
         private System.Windows.Forms.Button Addalbumbutton;
         private System.Windows.Forms.TextBox albumnametextbox;
         private System.Windows.Forms.ComboBox typeofalbum;
+        private System.Windows.Forms.Button backbutton;
+        private System.Windows.Forms.Label statustext;
     }
 }

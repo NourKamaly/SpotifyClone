@@ -23,6 +23,7 @@ namespace spotiify
 
         private void BioForm_Load(object sender, EventArgs e)
         {
+            statustext.Text = "";
             conn = new OracleConnection(ordb);
             conn.Open();
         }
@@ -34,10 +35,30 @@ namespace spotiify
             cmd.CommandText = "update artists set bio=:bioo where artistid=:AID";
             cmd.Parameters.Add("bioo", biotextbox.Text);
             cmd.Parameters.Add("AID", AID);
-            int r = cmd.ExecuteNonQuery();
+            try
+            {
+                int r = cmd.ExecuteNonQuery();
+                if (r != -1) 
+                {
+                    statustext.Text = "Added Successfully!";
+                }
+                else 
+                {
+                    statustext.Text = "Unfortunately Not Added!";
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("Not Valid");
+            }
+            
+
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
             this.Hide();
             Artist obj = new Artist();
-            this.Hide();
             obj.Show();
         }
     }

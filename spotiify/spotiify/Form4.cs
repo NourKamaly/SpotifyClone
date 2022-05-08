@@ -42,7 +42,7 @@ namespace spotiify
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void createbutton_Click(object sender, EventArgs e)
         {
             string constr = "Data Source = orcl; User Id = scott; Password= tiger;";
 
@@ -111,5 +111,28 @@ namespace spotiify
 
         }
 
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 obj = new Form1();
+            obj.Show();
+        }
+
+        private void enterplaylistnametext(object sender, EventArgs e)
+        {
+
+            if (textBox1.Text == "playlist name")
+            {
+                textBox1.Text = "";
+            }
+        }
+
+        private void leaveplaylistnametext(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "playlist name";
+            }
+        }
     }
 }

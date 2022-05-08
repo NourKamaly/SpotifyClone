@@ -23,6 +23,7 @@ namespace spotiify
 
         private void Addalbumform_Load(object sender, EventArgs e)
         {
+            statustext.Text = "";
             conn = new OracleConnection(ordb);
             conn.Open();
             OracleCommand cmd = new OracleCommand();
@@ -53,16 +54,29 @@ namespace spotiify
                 newId = 1;
             }
 
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = "ADD_ALBUM";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("aalbum", newId);
-            cmd.Parameters.Add("atype", typeofalbum.Text);
-            cmd.Parameters.Add("aaname", albumnametextbox.Text.ToString());
-            cmd.Parameters.Add("sname", Artist.AID);
-            OracleDataReader dr = cmd.ExecuteReader();
-            this.Hide();
+            if (typeofalbum.Text == "Rap" || typeofalbum.Text == "Romantic" || typeofalbum.Text == "Sad" || typeofalbum.Text == "Quran")
+            {
+
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "ADD_ALBUM";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("aalbum", newId);
+                cmd.Parameters.Add("atype", typeofalbum.Text);
+                cmd.Parameters.Add("aaname", albumnametextbox.Text.ToString());
+                cmd.Parameters.Add("aartistid", Artist.AID);
+                OracleDataReader dr = cmd.ExecuteReader();
+                dr.Close();
+                statustext.Text = "Added Successfully!";
+            }
+            else 
+            {
+                statustext.Text = "Unfortunately Not Added!";
+            }
+
+    
+           
+            
         }
 
         private void enteralbumtext(object sender, EventArgs e)
@@ -79,6 +93,13 @@ namespace spotiify
             {
                 albumnametextbox.Text = "Album Name";
             }
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Artist obj = new Artist();
+            obj.Show();
         }
     }
 }

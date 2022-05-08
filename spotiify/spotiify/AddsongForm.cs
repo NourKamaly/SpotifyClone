@@ -22,6 +22,7 @@ namespace spotiify
 
         private void AddsongForm_Load(object sender, EventArgs e)
         {
+            statustext.Text = "";
             conn = new OracleConnection(ordb);
             conn.Open();
             OracleCommand cmd = new OracleCommand();
@@ -58,7 +59,8 @@ namespace spotiify
                 newId = 1;
             }
 
-              OracleCommand cmd = new OracleCommand();
+            bool check = true;
+            OracleCommand cmd = new OracleCommand();
               cmd.Connection = conn;
               cmd.CommandText = "ADD_SONG";
               cmd.CommandType = CommandType.StoredProcedure;
@@ -83,21 +85,37 @@ namespace spotiify
                 cmd2.CommandText = "select albumid from albums where aname=:albname";
                 cmd2.Parameters.Add("albname", typeofsong.Text);
                 OracleDataReader r = cmd2.ExecuteReader();
+               
                 if (r.Read()) 
                 {
                     string albumid = r[0].ToString();
                     cmd.Parameters.Add("salbumid", albumid);
+                    
                 }
                 else 
                 {
-                    MessageBox.Show("Album Not Found");
+                    check = false;
                 }
                 
             }
-            OracleDataReader dr = cmd.ExecuteReader();
-            this.Hide();
-
-         }
+            try
+            {
+                OracleDataReader dr = cmd.ExecuteReader();
+            }
+            catch 
+            {
+                check = false;
+            }
+            if (check) 
+            {
+                statustext.Text = "Added Successfully!";
+            }
+            else 
+            {
+                statustext.Text = "Unfortunately Not Added!";
+            }
+            
+        }
 
         private void entersongnametext(object sender, EventArgs e)
         {
@@ -129,6 +147,13 @@ namespace spotiify
             {
                 lengthofsongtextbox.Text = "Length of Song";
             }
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Artist obj = new Artist();
+            obj.Show();
         }
     }
 }

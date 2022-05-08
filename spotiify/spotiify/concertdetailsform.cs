@@ -39,5 +39,19 @@ namespace spotiify
 
             }
         }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Artist obj = new Artist();
+            obj.Show();
+        }
+
+        private void backbutton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Artist obj = new Artist();
+            obj.Show();
+        }
     }
 }

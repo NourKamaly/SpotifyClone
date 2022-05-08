@@ -13,7 +13,7 @@ namespace spotiify
 {
     public partial class Artist : Form
     {
-        public static string AID = login.AID,albumname,ALID,COID;
+        public static string AID,albumname,ALID,COID;
         string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
         public Artist()
@@ -23,13 +23,13 @@ namespace spotiify
 
         private void Addsongbutton_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             AddsongForm obj = new AddsongForm();
             obj.Show();
         }
         private void Artist_Load(object sender, EventArgs e)
         {
-
+            AID = login.AID;
             conn = new OracleConnection(ordb);
             conn.Open();
             OracleCommand cmd = new OracleCommand();
@@ -111,6 +111,25 @@ namespace spotiify
             obj.Show();
         }
 
+        private void artistreportbutton_Click(object sender, EventArgs e)
+        {
+            Artistreportform obj = new Artistreportform();
+            obj.Show();
+        }
+
+        private void logoutbutton_Click(object sender, EventArgs e)
+        {
+            AID = null;
+            songslist = null;
+            concertslist = null;
+            albumslist = null;
+            artistName = null;
+            artistBio = null;
+            this.Hide();
+            login obj = new login();
+            obj.Show();
+        }
+
         private void concertslist_SelectedIndexChanged(object sender, EventArgs e)
         {
             string concert_name = concertslist.Text;
@@ -124,6 +143,7 @@ namespace spotiify
             {
                 COID = r[0].ToString();
             }
+            this.Hide();
             concertdetailsform obj = new concertdetailsform();
             obj.Show();
         }
@@ -147,7 +167,7 @@ namespace spotiify
             {
                 ALID = r[0].ToString();
             }
-
+            this.Hide();
             songsofspecificalbumform obj = new songsofspecificalbumform();
             obj.Show();
         }

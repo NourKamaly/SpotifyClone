@@ -113,9 +113,39 @@ namespace spotiify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backbutton {
+            get {
+                object obj = ResourceManager.GetObject("backbutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap concertdetailsimage {
             get {
                 object obj = ResourceManager.GetObject("concertdetailsimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap createplaylistimage {
+            get {
+                object obj = ResourceManager.GetObject("createplaylistimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap homepageimageforlistener {
+            get {
+                object obj = ResourceManager.GetObject("homepageimageforlistener", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,16 @@ namespace spotiify.Properties {
         internal static System.Drawing.Bitmap saliba {
             get {
                 object obj = ResourceManager.GetObject("saliba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchimage {
+            get {
+                object obj = ResourceManager.GetObject("searchimage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

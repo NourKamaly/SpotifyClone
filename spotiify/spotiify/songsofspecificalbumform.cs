@@ -22,6 +22,13 @@ namespace spotiify
             InitializeComponent();
         }
 
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Artist obj = new Artist();
+            obj.Show();
+        }
+
         private void songsofspecificalbumform_Load(object sender, EventArgs e)
         {
 

@@ -80,6 +80,7 @@ namespace spotiify
                 if (r.Read())
                 {
                     LID = r[2].ToString();
+                    this.Hide();
                     Form1 obj = new Form1();
                     obj.Show();
                 }

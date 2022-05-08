@@ -138,21 +138,37 @@ namespace spotiify
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             Form3 obj = new Form3();
             obj.Show();
         }
 
-        private void button2_Click_2(object sender, EventArgs e)
+        private void button2_Click_3(object sender, EventArgs e)
         {
+            this.Hide();
             Form2 obj = new Form2();
+            obj.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 obj = new Form4();
             obj.Show();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Form4 obj = new Form4();
+            listenerreportform obj = new listenerreportform();
+            obj.Show();
+        }
+
+        private void logoutbutton_Click(object sender, EventArgs e)
+        {
+            listView1 = null;
+            this.Hide();
+            login obj = new login();
             obj.Show();
         }
     }

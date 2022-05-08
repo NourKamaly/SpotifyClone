@@ -48,10 +48,94 @@ namespace spotiify
             cmd.Parameters.Add("eedescription", concertdescriptiontextbox.Text);
             cmd.Parameters.Add("edate", concertdate.Value);
             cmd.Parameters.Add("eartistid", Artist.AID);
-            OracleDataReader dr = cmd.ExecuteReader();
+            bool check = true;
+            try
+            {
+                OracleDataReader dr = cmd.ExecuteReader();
+            }
+            catch
+            {
+                check = false;
+            }
+            if (check)
+            {
+                statustext.Text = "Added Successfully!";
+            }
+            else 
+            {
+                statustext.Text = "Unfortunately Not Added!";
+            }
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
             this.Hide();
             Artist obj = new Artist();
             obj.Show();
+        }
+
+        private void enterconcertnametext(object sender, EventArgs e)
+        {
+            if (concertnametextbox.Text == "Concert Name")
+            {
+                concertnametextbox.Text = "";
+            }
+        }
+
+        private void leaveconcertnametext(object sender, EventArgs e)
+        {
+            if (concertnametextbox.Text == "")
+            {
+                concertnametextbox.Text = "Concert Name";
+            }
+        }
+
+        private void enterlocationtext(object sender, EventArgs e)
+        {
+            if (concertlocationtextbox.Text == "Location")
+            {
+                concertlocationtextbox.Text = "";
+            }
+        }
+
+        private void leavelocationtext(object sender, EventArgs e)
+        {
+            if (concertlocationtextbox.Text == "")
+            {
+                concertlocationtextbox.Text = "Location";
+            }
+        }
+
+        private void enterpricetext(object sender, EventArgs e)
+        {
+            if (concertpricetextbox.Text == "Price")
+            {
+                concertpricetextbox.Text = "";
+            }
+        }
+
+        private void leavepricetext(object sender, EventArgs e)
+        {
+            if (concertpricetextbox.Text == "")
+            {
+                concertpricetextbox.Text = "Price";
+            }
+        }
+
+        private void enterdescritpiontext(object sender, EventArgs e)
+        {
+            if (concertdescriptiontextbox.Text == "Description")
+            {
+                concertdescriptiontextbox.Text = "";
+            }
+        }
+
+        private void leavedescriptiontext(object sender, EventArgs e)
+        {
+            if (concertdescriptiontextbox.Text == "")
+            {
+                concertdescriptiontextbox.Text = "Description";
+            }
         }
 
         public addconcertform()
@@ -61,6 +145,7 @@ namespace spotiify
 
         private void addconcertform_Load(object sender, EventArgs e)
         {
+            statustext.Text = "";
             conn = new OracleConnection(ordb);
             conn.Open();
         }

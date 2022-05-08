@@ -30,6 +30,7 @@ namespace spotiify
         private void InitializeComponent()
         {
             this.songsofalbumlist = new System.Windows.Forms.ListBox();
+            this.backbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // songsofalbumlist
@@ -45,6 +46,20 @@ namespace spotiify
             this.songsofalbumlist.Size = new System.Drawing.Size(463, 456);
             this.songsofalbumlist.TabIndex = 1;
             // 
+            // backbutton
+            // 
+            this.backbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.backbutton.BackgroundImage = global::spotiify.Properties.Resources.backbutton;
+            this.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backbutton.FlatAppearance.BorderSize = 0;
+            this.backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbutton.Location = new System.Drawing.Point(130, 40);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(40, 40);
+            this.backbutton.TabIndex = 37;
+            this.backbutton.UseVisualStyleBackColor = false;
+            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
+            // 
             // songsofspecificalbumform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -52,7 +67,9 @@ namespace spotiify
             this.BackgroundImage = global::spotiify.Properties.Resources.songsofspecificalbumimage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1520, 789);
+            this.Controls.Add(this.backbutton);
             this.Controls.Add(this.songsofalbumlist);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "songsofspecificalbumform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "songsofspecificalbumform";
@@ -63,5 +80,6 @@ namespace spotiify
 
         #endregion
         private System.Windows.Forms.ListBox songsofalbumlist;
+        private System.Windows.Forms.Button backbutton;
     }
 }

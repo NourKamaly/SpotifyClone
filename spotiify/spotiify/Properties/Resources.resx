@@ -133,14 +133,26 @@
   <data name="artistimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\artistimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\backbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="concertdetailsimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\concertdetailsimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="createplaylistimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\createplaylistimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homepageimageforlistener" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\homepageimageforlistener.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\loginimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="saliba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\saliba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="searchimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\searchimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="signupimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\signupimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

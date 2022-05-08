@@ -35,6 +35,8 @@ namespace spotiify
             this.concertpricetextbox = new System.Windows.Forms.TextBox();
             this.concertdate = new System.Windows.Forms.DateTimePicker();
             this.addconcertbutton = new System.Windows.Forms.Button();
+            this.backbutton = new System.Windows.Forms.Button();
+            this.statustext = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // concertlocationtextbox
@@ -48,6 +50,8 @@ namespace spotiify
             this.concertlocationtextbox.Size = new System.Drawing.Size(271, 21);
             this.concertlocationtextbox.TabIndex = 20;
             this.concertlocationtextbox.Text = "Location";
+            this.concertlocationtextbox.Enter += new System.EventHandler(this.enterlocationtext);
+            this.concertlocationtextbox.Leave += new System.EventHandler(this.leavelocationtext);
             // 
             // concertnametextbox
             // 
@@ -60,6 +64,8 @@ namespace spotiify
             this.concertnametextbox.Size = new System.Drawing.Size(271, 21);
             this.concertnametextbox.TabIndex = 18;
             this.concertnametextbox.Text = "Concert Name";
+            this.concertnametextbox.Enter += new System.EventHandler(this.enterconcertnametext);
+            this.concertnametextbox.Leave += new System.EventHandler(this.leaveconcertnametext);
             // 
             // concertdescriptiontextbox
             // 
@@ -72,6 +78,8 @@ namespace spotiify
             this.concertdescriptiontextbox.Size = new System.Drawing.Size(271, 21);
             this.concertdescriptiontextbox.TabIndex = 24;
             this.concertdescriptiontextbox.Text = "Description";
+            this.concertdescriptiontextbox.Enter += new System.EventHandler(this.enterdescritpiontext);
+            this.concertdescriptiontextbox.Leave += new System.EventHandler(this.leavedescriptiontext);
             // 
             // concertpricetextbox
             // 
@@ -84,6 +92,8 @@ namespace spotiify
             this.concertpricetextbox.Size = new System.Drawing.Size(271, 21);
             this.concertpricetextbox.TabIndex = 22;
             this.concertpricetextbox.Text = "Price";
+            this.concertpricetextbox.Enter += new System.EventHandler(this.enterpricetext);
+            this.concertpricetextbox.Leave += new System.EventHandler(this.leavepricetext);
             // 
             // concertdate
             // 
@@ -96,9 +106,9 @@ namespace spotiify
             // 
             // addconcertbutton
             // 
-            this.addconcertbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addconcertbutton.FlatAppearance.BorderSize = 0;
             this.addconcertbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.addconcertbutton.FlatAppearance.BorderSize = 0;
+            this.addconcertbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addconcertbutton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addconcertbutton.ForeColor = System.Drawing.Color.White;
             this.addconcertbutton.Location = new System.Drawing.Point(629, 593);
@@ -109,6 +119,31 @@ namespace spotiify
             this.addconcertbutton.UseVisualStyleBackColor = false;
             this.addconcertbutton.Click += new System.EventHandler(this.addconcertbutton_Click);
             // 
+            // backbutton
+            // 
+            this.backbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.backbutton.BackgroundImage = global::spotiify.Properties.Resources.backbutton;
+            this.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backbutton.FlatAppearance.BorderSize = 0;
+            this.backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbutton.Location = new System.Drawing.Point(130, 40);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(40, 40);
+            this.backbutton.TabIndex = 35;
+            this.backbutton.UseVisualStyleBackColor = false;
+            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
+            // 
+            // statustext
+            // 
+            this.statustext.AutoSize = true;
+            this.statustext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.statustext.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.statustext.Location = new System.Drawing.Point(698, 273);
+            this.statustext.Name = "statustext";
+            this.statustext.Size = new System.Drawing.Size(121, 17);
+            this.statustext.TabIndex = 36;
+            this.statustext.Text = "added successfully";
+            // 
             // addconcertform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -116,12 +151,15 @@ namespace spotiify
             this.BackgroundImage = global::spotiify.Properties.Resources.add_concert;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1538, 837);
+            this.Controls.Add(this.statustext);
+            this.Controls.Add(this.backbutton);
             this.Controls.Add(this.addconcertbutton);
             this.Controls.Add(this.concertdate);
             this.Controls.Add(this.concertdescriptiontextbox);
             this.Controls.Add(this.concertpricetextbox);
             this.Controls.Add(this.concertlocationtextbox);
             this.Controls.Add(this.concertnametextbox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addconcertform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addconcertform";
@@ -138,5 +176,7 @@ namespace spotiify
         private System.Windows.Forms.TextBox concertpricetextbox;
         private System.Windows.Forms.DateTimePicker concertdate;
         private System.Windows.Forms.Button addconcertbutton;
+        private System.Windows.Forms.Button backbutton;
+        private System.Windows.Forms.Label statustext;
     }
 }

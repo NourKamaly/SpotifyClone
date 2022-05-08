@@ -75,5 +75,28 @@ namespace spotiify
 
         }
 
+        private void searchboxenter(object sender, EventArgs e)
+        {
+
+            if (textBox1.Text == "type to search")
+            {
+                textBox1.Text = "";
+            }
+        }
+
+        private void serachboxleave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "type to search";
+            }
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 obj = new Form1();
+            obj.Show();
+        }
     }
 }

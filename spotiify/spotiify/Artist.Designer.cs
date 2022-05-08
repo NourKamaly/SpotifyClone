@@ -38,6 +38,8 @@ namespace spotiify
             this.albumslist = new System.Windows.Forms.ListBox();
             this.addconertbutton = new System.Windows.Forms.Button();
             this.concertslist = new System.Windows.Forms.ListBox();
+            this.artistreportbutton = new System.Windows.Forms.Button();
+            this.logoutbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // artistName
@@ -173,6 +175,40 @@ namespace spotiify
             this.concertslist.TabIndex = 30;
             this.concertslist.SelectedIndexChanged += new System.EventHandler(this.concertslist_SelectedIndexChanged);
             // 
+            // artistreportbutton
+            // 
+            this.artistreportbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.artistreportbutton.BackgroundImage = global::spotiify.Properties.Resources.saliba;
+            this.artistreportbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.artistreportbutton.FlatAppearance.BorderSize = 0;
+            this.artistreportbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.artistreportbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.artistreportbutton.Location = new System.Drawing.Point(29, 317);
+            this.artistreportbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.artistreportbutton.Name = "artistreportbutton";
+            this.artistreportbutton.Size = new System.Drawing.Size(23, 23);
+            this.artistreportbutton.TabIndex = 31;
+            this.artistreportbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.artistreportbutton.UseVisualStyleBackColor = false;
+            this.artistreportbutton.Click += new System.EventHandler(this.artistreportbutton_Click);
+            // 
+            // logoutbutton
+            // 
+            this.logoutbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.logoutbutton.BackgroundImage = global::spotiify.Properties.Resources.saliba;
+            this.logoutbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logoutbutton.FlatAppearance.BorderSize = 0;
+            this.logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutbutton.Location = new System.Drawing.Point(29, 369);
+            this.logoutbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logoutbutton.Name = "logoutbutton";
+            this.logoutbutton.Size = new System.Drawing.Size(23, 23);
+            this.logoutbutton.TabIndex = 32;
+            this.logoutbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.logoutbutton.UseVisualStyleBackColor = false;
+            this.logoutbutton.Click += new System.EventHandler(this.logoutbutton_Click);
+            // 
             // Artist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -180,6 +216,8 @@ namespace spotiify
             this.BackgroundImage = global::spotiify.Properties.Resources.artistimage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1538, 836);
+            this.Controls.Add(this.logoutbutton);
+            this.Controls.Add(this.artistreportbutton);
             this.Controls.Add(this.concertslist);
             this.Controls.Add(this.albumslist);
             this.Controls.Add(this.songslist);
@@ -210,5 +248,7 @@ namespace spotiify
         private System.Windows.Forms.ListBox songslist;
         private System.Windows.Forms.Button addconertbutton;
         private System.Windows.Forms.ListBox concertslist;
+        private System.Windows.Forms.Button artistreportbutton;
+        private System.Windows.Forms.Button logoutbutton;
     }
 }

@@ -30,79 +30,81 @@ namespace spotiify
         private void InitializeComponent()
         {
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.createbutton = new System.Windows.Forms.Button();
+            this.backbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.ForeColor = System.Drawing.Color.White;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(372, 123);
+            this.checkedListBox1.Location = new System.Drawing.Point(543, 407);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(500, 232);
+            this.checkedListBox1.Size = new System.Drawing.Size(479, 266);
             this.checkedListBox1.TabIndex = 23;
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(372, 410);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 58);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Create";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 26);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Select Music to Add to playlist :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(121, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 26);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Playlist Name :";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(389, 28);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox1.Location = new System.Drawing.Point(634, 324);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(483, 24);
+            this.textBox1.Size = new System.Drawing.Size(287, 21);
             this.textBox1.TabIndex = 19;
+            this.textBox1.Text = "playlist name";
+            this.textBox1.Enter += new System.EventHandler(this.enterplaylistnametext);
+            this.textBox1.Leave += new System.EventHandler(this.leaveplaylistnametext);
+            // 
+            // createbutton
+            // 
+            this.createbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.createbutton.FlatAppearance.BorderSize = 0;
+            this.createbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createbutton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createbutton.ForeColor = System.Drawing.Color.White;
+            this.createbutton.Location = new System.Drawing.Point(685, 731);
+            this.createbutton.Name = "createbutton";
+            this.createbutton.Size = new System.Drawing.Size(187, 47);
+            this.createbutton.TabIndex = 31;
+            this.createbutton.Text = "Create";
+            this.createbutton.UseVisualStyleBackColor = false;
+            this.createbutton.Click += new System.EventHandler(this.createbutton_Click);
+            // 
+            // backbutton
+            // 
+            this.backbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.backbutton.BackgroundImage = global::spotiify.Properties.Resources.backbutton;
+            this.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backbutton.FlatAppearance.BorderSize = 0;
+            this.backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbutton.Location = new System.Drawing.Point(130, 40);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(40, 40);
+            this.backbutton.TabIndex = 39;
+            this.backbutton.UseVisualStyleBackColor = false;
+            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 496);
+            this.BackgroundImage = global::spotiify.Properties.Resources.createplaylistimage;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.backbutton);
+            this.Controls.Add(this.createbutton);
             this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
@@ -113,9 +115,8 @@ namespace spotiify
         #endregion
 
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        public System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button createbutton;
+        private System.Windows.Forms.Button backbutton;
     }
 }
