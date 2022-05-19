@@ -1,7 +1,7 @@
 ﻿
 namespace spotiify
 {
-    partial class listenerreportform
+    partial class ListenerReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,58 +29,58 @@ namespace spotiify
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.button1.Location = new System.Drawing.Point(627, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Generate report";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(452, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
             // 
             // crystalReportViewer1
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(38, 81);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(139, 79);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(983, 393);
-            this.crystalReportViewer1.TabIndex = 2;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(899, 457);
+            this.crystalReportViewer1.TabIndex = 5;
             // 
-            // listenerreportform
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(328, 23);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.button1.Location = new System.Drawing.Point(560, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 33);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Generate report";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ListenerReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 507);
+            this.ClientSize = new System.Drawing.Size(1177, 550);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
-            this.Name = "listenerreportform";
-            this.Text = "listenerreportform";
+            this.Name = "ListenerReportForm";
+            this.Text = "ListenerReportForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

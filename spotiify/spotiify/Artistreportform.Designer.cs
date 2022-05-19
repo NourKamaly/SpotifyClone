@@ -60,14 +60,14 @@ namespace spotiify
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(51, 81);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(704, 347);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(899, 457);
             this.crystalReportViewer1.TabIndex = 2;
             // 
             // Artistreportform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1031, 593);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);

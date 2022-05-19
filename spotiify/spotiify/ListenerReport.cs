@@ -16,14 +16,14 @@ namespace spotiify {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Listener : ReportClass {
+    public class ListenerReport : ReportClass {
         
-        public Listener() {
+        public ListenerReport() {
         }
         
         public override string ResourceName {
             get {
-                return "Listener.rpt";
+                return "ListenerReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace spotiify {
         
         public override string FullResourceName {
             get {
-                return "spotiify.Listener.rpt";
+                return "spotiify.ListenerReport.rpt";
             }
             set {
                 // Do nothing
@@ -122,7 +122,7 @@ namespace spotiify {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_listenerName {
+        public CrystalDecisions.Shared.IParameterField Parameter_ListenerName {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -130,9 +130,9 @@ namespace spotiify {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedListener : Component, ICachedReport {
+    public class CachedListenerReport : Component, ICachedReport {
         
-        public CachedListener() {
+        public CachedListenerReport() {
         }
         
         [Browsable(false)]
@@ -169,7 +169,7 @@ namespace spotiify {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Listener rpt = new Listener();
+            ListenerReport rpt = new ListenerReport();
             rpt.Site = this.Site;
             return rpt;
         }

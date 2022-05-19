@@ -129,17 +129,17 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listener.cs">
+    <Compile Include="ListenerReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Listener.rpt</DependentUpon>
+      <DependentUpon>ListenerReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="listenerreportform.cs">
+    <Compile Include="ListenerReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listenerreportform.Designer.cs">
-      <DependentUpon>listenerreportform.cs</DependentUpon>
+    <Compile Include="ListenerReportForm.Designer.cs">
+      <DependentUpon>ListenerReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -198,12 +198,12 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listener.rpt">
+    <EmbeddedResource Include="ListenerReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Listener.cs</LastGenOutput>
+      <LastGenOutput>ListenerReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="listenerreportform.resx">
-      <DependentUpon>listenerreportform.cs</DependentUpon>
+    <EmbeddedResource Include="ListenerReportForm.resx">
+      <DependentUpon>ListenerReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -281,6 +281,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\createplaylistimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\maxresdefault.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

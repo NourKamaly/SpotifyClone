@@ -160,7 +160,7 @@ namespace spotiify
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            listenerreportform obj = new listenerreportform();
+            ListenerReportForm obj = new ListenerReportForm();
             obj.Show();
         }
 

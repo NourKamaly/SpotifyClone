@@ -11,17 +11,18 @@ using CrystalDecisions.Shared;
 
 namespace spotiify
 {
-    public partial class listenerreportform : Form
+    public partial class ListenerReportForm : Form
     {
-        Listener listener;
-        public listenerreportform()
+        ListenerReport listener;
+        public ListenerReportForm()
         {
-            listener = new Listener();
             InitializeComponent();
+            listener = new ListenerReport();
             foreach (ParameterDiscreteValue value in listener.ParameterFields[0].DefaultValues)
             {
                 comboBox1.Items.Add(value.Value);
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
