@@ -140,6 +140,7 @@ namespace spotiify
 
         private void button5_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form3 obj = new Form3();
             obj.Show();
         }

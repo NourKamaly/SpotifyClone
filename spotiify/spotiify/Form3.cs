@@ -95,6 +95,7 @@ namespace spotiify
             ListView[] listView = new ListView[ds.Tables[0].Rows.Count];
             ColumnHeader[] songName = new ColumnHeader[ds.Tables[0].Rows.Count];
             ColumnHeader[] artistName = new ColumnHeader[ds.Tables[0].Rows.Count];
+          
 
             int indices = 0; int a = 1;
 
@@ -106,15 +107,16 @@ namespace spotiify
 
                     label4[indices] = new Label();
                     label4[indices].AutoSize = true;
-                    label4[indices].BackColor = SystemColors.ButtonHighlight;
+                    label4[indices].BackColor = Color.FromArgb(51,51,51);
                     label4[indices].Font = new Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    label4[indices].Location = new Point(242, 64);
+                    label4[indices].Location = new Point(120, 64);
                     //label4[indices].Top = a * 70;
 
                     label4[indices].Size = new Size(128, 22);
 
                     label4[indices].Text = ds.Tables[0].Rows[i]["pname"].ToString();
-                    this.Controls.Add(label4[indices]);
+                    panel1.Controls.Add(label4[indices]);
+                  
 
                     a++;
 
@@ -122,9 +124,9 @@ namespace spotiify
                     listView[indices] = new ListView();
                     listView[indices].Font = new Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     listView[indices].HideSelection = false;
-                    listView[indices].Location = new Point(232, 92);
+                    listView[indices].Location = new Point(120, 92);
 
-                    listView[indices].Size = new Size(548, 166);
+                    listView[indices].Size = new Size(400, 166);
                     listView[indices].TabIndex = 14;
                     listView[indices].UseCompatibleStateImageBehavior = false;
                     listView[indices].View = View.Details;
@@ -143,7 +145,7 @@ namespace spotiify
                     listView[indices].Columns.Add(songName[indices]);
                     listView[indices].Columns.Add(artistName[indices]);
 
-                    this.Controls.Add(listView[indices]);
+                    panel1.Controls.Add(listView[indices]);
 
                     string[] s = new string[2];
                     s[0] = Songid[ds.Tables[0].Rows[i]["songid"].ToString()].Key;
@@ -174,23 +176,23 @@ namespace spotiify
 
                         label4[indices] = new Label();
                         label4[indices].AutoSize = true;
-                        label4[indices].BackColor = SystemColors.ButtonHighlight;
+                        label4[indices].BackColor = Color.FromArgb(51, 51, 51);
                         label4[indices].Font = new Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                        label4[indices].Location = new Point(242, 64);
+                        label4[indices].Location = new Point(120, 64);
                         label4[indices].Top = a * (135 + a * i) + i;
 
                         label4[indices].Size = new Size(128, 22);
 
                         label4[indices].Text = ds.Tables[0].Rows[i]["pname"].ToString();
-                        this.Controls.Add(label4[indices]);
+                        panel1.Controls.Add(label4[indices]);
 
 
                         //listview
                         listView[indices] = new ListView();
                         listView[indices].Font = new Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         listView[indices].HideSelection = false;
-                        listView[indices].Location = new Point(232, 92);
-                        listView[indices].Size = new Size(548, 166);
+                        listView[indices].Location = new Point(120, 92);
+                        listView[indices].Size = new Size(400, 166);
                         listView[indices].TabIndex = 14;
                         listView[indices].UseCompatibleStateImageBehavior = false;
                         listView[indices].View = View.Details;
@@ -210,7 +212,7 @@ namespace spotiify
                         listView[indices].Columns.Add(songName[indices]);
                         listView[indices].Columns.Add(artistName[indices]);
 
-                        this.Controls.Add(listView[indices]);
+                        panel1.Controls.Add(listView[indices]);
                         a++;
                         string[] s = new string[2];
                         s[0] = Songid[ds.Tables[0].Rows[i]["songid"].ToString()].Key;
@@ -268,6 +270,33 @@ namespace spotiify
         {
             Form4 frm4 = new Form4();
             frm4.Show();
+        }
+
+        private void shipdbutton_MouseHover(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(29,152,72);
+        }
+
+        private void hoverbtn(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.FromArgb(29, 152, 72);
+        }
+
+        private void shipdbutton_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(29, 185, 84);
+        }
+
+        private void leavebtn(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.FromArgb(29, 185, 84);
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 obj = new Form1();
+            obj.Show();
         }
     }
 }
