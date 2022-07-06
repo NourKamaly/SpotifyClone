@@ -10,6 +10,7 @@ in our Software Engineering Course project [2021-2022] , adding new fun features
 4. Crystal Reports
 
 # GUI 
-![loginimage](https://user-images.githubusercontent.com/76780379/177434233-a728cb35-45b7-41de-970e-131640fc8448.png)
-![homepageimageforlistener](https://user-images.githubusercontent.com/76780379/177434435-cfe644fd-eb82-431f-8574-ed0b27ccbb48.png)
-![artistimage](https://user-images.githubusercontent.com/76780379/177434177-3c938afa-d4bc-4e78-a61d-aee9816eabd5.png)
+![Spotify - login](https://user-images.githubusercontent.com/76780379/177581011-84a25e20-ba9c-4561-bdff-f5a9ac9c42a1.jpg)
+![Spotify - explore music](https://user-images.githubusercontent.com/76780379/177581228-f4c88ca7-bad0-4b78-ad9e-b0e780f843f8.jpg)
+![Spotify - add concert](https://user-images.githubusercontent.com/76780379/177581350-50fbd4e1-44a1-4af8-980c-21ba3e9cbd58.jpg)
+
